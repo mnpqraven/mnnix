@@ -1,0 +1,3 @@
+[submodule "packages/grpc/src/proto"]
+	path = packages/grpc/src/proto
+	url = git@github.com:mnpqraven/vps-proto.git

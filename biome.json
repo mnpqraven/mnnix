@@ -1,0 +1,49 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignore": [
+      "apps/**/tanstack-start.d.ts",
+      "apps/**/routeTree.gen.ts",
+      "apps/**/app.config.timestamp_*.*",
+      "packages/protocol/src/proto_ts/**/*",
+      "packages/database/src/drizzle/**/*",
+      "packages/**/vite.config.ts"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "useEditorconfig": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 80
+  },
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "all",
+      "arrowParentheses": "always"
+    }
+  },
+  "linter": {
+    "rules": {
+      "nursery": {
+        "useSortedClasses": { "level": "warn", "fix": "safe" }
+      },
+      "correctness": {
+        "noUnusedVariables": "error",
+        "noChildrenProp": "off"
+      },
+      "style": {
+        "useImportType": { "level": "warn", "fix": "safe" }
+      }
+    }
+  }
+}
