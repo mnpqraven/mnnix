@@ -14,8 +14,6 @@ export * from "./dialog";
 export * from "./drawer";
 export * from "./dropdown-menu";
 export * from "./hovercard";
-export * from "./form";
-export * from "./Form/index";
 export * from "./switch";
 export * from "./input";
 export * from "./label";

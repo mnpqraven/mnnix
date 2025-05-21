@@ -2,6 +2,7 @@
 
 import { cn } from "@repo/lib";
 import { useVirtualizer } from "@tanstack/react-virtual";
+import { type } from "arktype";
 import { cva } from "class-variance-authority";
 import Fuse, { type FuseOptionKey } from "fuse.js";
 import { Check, ChevronsUpDown, Loader2 } from "lucide-react";
@@ -12,7 +13,6 @@ import {
   useRef,
   useState,
 } from "react";
-import { z } from "zod";
 import { Badge } from "./badge";
 import { Button, type ButtonProps } from "./button";
 import { Command, CommandGroup, CommandInput, CommandItem } from "./command";
@@ -27,15 +27,11 @@ function stringSer(val: string | number): string {
   return "";
 }
 
-const searchOptSchema = z
-  .object({
-    value: z.boolean().default(true),
-    label: z.boolean().default(true),
-  })
-  .default({
-    label: true,
-    value: true,
-  });
+const searchOptSchema = type({
+  value: "boolean = true",
+  label: "boolean = true",
+});
+type SearchOptSchema = typeof searchOptSchema.infer;
 
 type Value = string | number;
 
@@ -59,7 +55,7 @@ interface Prop<T> extends ButtonProps {
    * */
   truncateAmount?: number;
   isLoading?: boolean;
-  searchOpt?: z.TypeOf<typeof searchOptSchema>;
+  searchOpt?: SearchOptSchema;
 }
 
 export function MultiCombobox<T>({
@@ -117,15 +113,18 @@ export function MultiCombobox<T>({
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   const searchEngine = useMemo(() => {
-    const { label: doSearchLabel, value: doSearchValue } =
-      searchOptSchema.parse(searchOpt);
+    const parsed = searchOptSchema(searchOpt);
     const keys: FuseOptionKey<T>[] = [];
-    if (doSearchLabel) keys.push({ getFn: labelAccessor, name: "label" });
-    if (doSearchValue)
-      keys.push({
-        getFn: (val) => stringSer(valueAccessor(val)),
-        name: "value",
-      });
+
+    if (!(parsed instanceof type.errors)) {
+      const { label: doSearchLabel, value: doSearchValue } = parsed;
+      if (doSearchLabel) keys.push({ getFn: labelAccessor, name: "label" });
+      if (doSearchValue)
+        keys.push({
+          getFn: (val) => stringSer(valueAccessor(val)),
+          name: "value",
+        });
+    }
 
     return new Fuse(options, { keys });
   }, [searchOpt, options]);
