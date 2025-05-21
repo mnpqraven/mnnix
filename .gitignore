@@ -54,5 +54,6 @@ Thumbs.db
 .next
 out
 
+app.config*timestamp*
 vite.config.*.timestamp*
 vitest.config.*.timestamp*
