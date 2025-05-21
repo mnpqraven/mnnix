@@ -1,19 +1,19 @@
-// app/routes/__root.tsx
-import type { ReactNode } from "react";
-import {
-  Outlet,
-  createRootRoute,
-  HeadContent,
-  Scripts,
-} from "@tanstack/react-router";
-import appCss from "../styles/app.css?url";
+import { Navbar } from "@/components/Navbar";
 import { getThemeServerFn } from "@/lib/theme";
 import { ProviderDOM } from "@/providers";
-import { Navbar } from "@/components/Navbar";
-import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { ToasterSonner } from "@repo/ui/primitive/sonner";
 import { useTheme } from "@/providers/theme";
+import { ToasterSonner } from "@repo/ui/primitive/sonner";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import {
+  HeadContent,
+  Outlet,
+  Scripts,
+  createRootRoute,
+} from "@tanstack/react-router";
+import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
+// app/routes/__root.tsx
+import type { ReactNode } from "react";
+import appCss from "../styles/app.css?url";
 
 export async function rootLoader() {
   const theme = await getThemeServerFn();

@@ -1,9 +1,9 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute('/whoami/')({
+export const Route = createFileRoute("/whoami/")({
   component: RouteComponent,
-})
+});
 
 function RouteComponent() {
-  return <div>Hello "/whoami/"!</div>
+  return <div>Hello "/whoami/"!</div>;
 }

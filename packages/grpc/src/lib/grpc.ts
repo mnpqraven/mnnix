@@ -1,3 +1,3 @@
 export function grpc(): string {
-  return 'grpc';
+  return "grpc";
 }
