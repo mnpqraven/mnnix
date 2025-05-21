@@ -1,1 +1,1 @@
-export * from "./lib/grpc.js";
+export * from "./lib";
