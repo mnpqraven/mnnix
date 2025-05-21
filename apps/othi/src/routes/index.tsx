@@ -1,8 +1,7 @@
 import * as fs from "node:fs";
 import { createFileRoute, useRouter } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
-import { lib } from "@repo/lib";
-import { database } from "@repo/database";
+import { cn } from "@repo/lib";
 
 const filePath = "count.txt";
 
@@ -46,8 +45,7 @@ function Home() {
       >
         Add 1 to {state}?
       </button>
-      hello from {lib()}
-      hello from {database()}
+      hello from {cn("flex flex-col")}
     </>
   );
 }

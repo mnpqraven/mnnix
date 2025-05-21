@@ -13,13 +13,16 @@
       "path": "./packages/lib"
     },
     {
-      "path": "./packages/ui"
-    },
-    {
       "path": "./packages/grpc"
     },
     {
       "path": "./packages/database"
+    },
+    {
+      "path": "./packages/env"
+    },
+    {
+      "path": "./packages/ui"
     }
   ]
 }

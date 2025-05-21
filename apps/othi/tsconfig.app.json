@@ -34,5 +34,13 @@
     "src/**/*.jsx",
     "src/**/*.ts",
     "src/**/*.tsx"
+  ],
+  "references": [
+    {
+      "path": "../../packages/lib/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/database/tsconfig.lib.json"
+    }
   ]
 }

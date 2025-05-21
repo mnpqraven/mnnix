@@ -18,8 +18,11 @@
   },
   "dependencies": {
     "@tanstack/react-table": "^8.21.3",
+    "arktype": "^2.1.20",
+    "clsx": "^2.1.1",
     "fuse.js": "^7.1.0",
     "jotai": "^2.12.3",
+    "tailwind-merge": "^3.3.0",
     "ulid": "^3.0.0"
   }
 }

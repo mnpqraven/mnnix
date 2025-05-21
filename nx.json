@@ -32,18 +32,18 @@
       },
       "exclude": [
         "packages/lib/*",
-        "packages/ui/*",
         "packages/grpc/*",
-        "packages/database/*"
+        "packages/database/*",
+        "packages/env/*"
       ]
     },
     {
       "plugin": "@nx/js/typescript",
       "include": [
         "packages/lib/*",
-        "packages/ui/*",
         "packages/grpc/*",
-        "packages/database/*"
+        "packages/database/*",
+        "packages/env/*"
       ],
       "options": {
         "typecheck": {
@@ -90,7 +90,8 @@
       },
       "library": {
         "style": "tailwind",
-        "linter": "none"
+        "linter": "none",
+        "unitTestRunner": "none"
       }
     }
   }

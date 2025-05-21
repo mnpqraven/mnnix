@@ -11,5 +11,10 @@ export default defineConfig({
         projects: ["./tsconfig.json"],
       }),
     ],
+    build: {
+      rollupOptions: {
+        external: ["pg-cloudflare"],
+      },
+    },
   },
 });

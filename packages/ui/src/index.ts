@@ -1,1 +1,4 @@
-export * from './lib/ui.js';
+"use client";
+
+export * from "./primitive";
+// export * from "./shared";
