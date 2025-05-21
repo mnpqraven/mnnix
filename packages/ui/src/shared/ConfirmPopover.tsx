@@ -1,13 +1,7 @@
 import { type ComponentPropsWithoutRef, type ReactNode, useState } from "react";
-import {
-  Button,
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "../primitive";
+import { Button } from "../primitive/button";
+import { Popover, PopoverContent, PopoverTrigger } from "../primitive/popover";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../primitive/tooltip";
 
 interface Prop {
   children: ReactNode;
