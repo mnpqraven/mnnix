@@ -10,7 +10,7 @@
       "apps/**/tanstack-start.d.ts",
       "apps/**/routeTree.gen.ts",
       "apps/**/app.config.timestamp_*.*",
-      "packages/protocol/src/proto_ts/**/*",
+      "packages/grpc/src/proto_ts/**/*",
       "packages/database/src/drizzle/**/*",
       "packages/**/vite.config.ts"
     ]
