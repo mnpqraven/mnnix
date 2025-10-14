@@ -1,3 +1,7 @@
+This repo is scaffolded by following these guides
+- [TypeScript Project References and PNPM Workspaces in Nx Monorepos](https://moatorres-blog.vercel.app/blog/technology/typescript-project-references-and-pnpm-workspaces-in-nx-monorepos)
+- [Breaking Down Libraries in Nx Monorepos with TypeScript Project References](https://moatorres-blog.vercel.app/blog/technology/breaking-down-libraries-in-nx-monorepos-with-typescript-project-references)
+
 # Mnnix
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
