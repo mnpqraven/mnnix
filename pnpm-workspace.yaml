@@ -1,6 +1,6 @@
 packages:
+  - "apps/*"
   - "packages/*"
-  - apps/admin
 
 autoInstallPeers: true
 strictPeerDependencies: false
