@@ -22,7 +22,12 @@
     "noUncheckedSideEffectImports": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["./src/*"]
     }
-  }
+  },
+  "references": [
+    {
+      "path": "../../packages/ui"
+    }
+  ]
 }
